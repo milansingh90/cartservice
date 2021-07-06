@@ -12,6 +12,5 @@ import java.util.Optional;
 @Repository
 public interface CartItemRepository extends JpaRepository<Item,Long> {
 
-    //@Query("SELECT c FROM Item c where c.itemcode = :code")
     Optional<Item> findItemByItemCode(@Param("code") String code);
 }

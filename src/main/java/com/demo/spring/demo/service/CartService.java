@@ -116,8 +116,7 @@ public class CartService {
         Optional<UserInfo> user = userInfoRepository.findByUserAuth_Username(principal.getName());
         cart.setCode("Cart-"+ UUID.randomUUID().toString());
         cart.setUserInfo(user.get());
-        return cartRepository.save(cart);
+        return saveCart(cart);
     }
-
 
 }

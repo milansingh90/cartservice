@@ -98,7 +98,7 @@ public class CartController {
             Principal principal) throws CartNotFoundException, UserNotAllowedException {
         Optional<Cart> cart = cartService.getCartByCode(code);
         if (!cart.isPresent()) {
-            throw new CartNotFoundException("Cart Not Found");
+            throw new CartNotFoundException("Cart Not Found by the given cart code");
         }
         checkIfUserAllowedToViewOrModifyCart(principal, cart.get());
         itemRequestDTO.setCart(cart.get());

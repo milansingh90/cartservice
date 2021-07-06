@@ -37,7 +37,7 @@ public class UserDetailsManageService implements UserDetailsService {
             return new org.springframework.security.core.userdetails.User(user.get().getUsername(), user.get().getPassword(),
                     new ArrayList<>());
         } else {
-            throw new UsernameNotFoundException("UserAuth not found with username: " + username);
+            throw new UsernameNotFoundException("User not found with username: " + username);
         }
 
     }
