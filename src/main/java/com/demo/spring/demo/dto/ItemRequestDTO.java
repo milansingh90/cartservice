@@ -1,6 +1,7 @@
 package com.demo.spring.demo.dto;
 
 import com.demo.spring.demo.beans.Cart;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.math.BigDecimal;
 
@@ -8,6 +9,7 @@ public class ItemRequestDTO {
     private String code;
     private Long quantity;
     private BigDecimal price;
+    @JsonIgnore
     private Cart cart;
 
     public String getCode() {
