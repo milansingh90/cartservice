@@ -27,6 +27,8 @@ kubectl expose deployment cartservice-deployment --type=NodePort (exposing the d
 minikube service cartservice-deployment --url (Get the url where minikube exposes the service. Use it to hit the URL)
 
 ````
+*The application can be accessed over Swagger UI as well once it is started. 
+The url to access is HOST-URL/swagger-ui.html*
 
 
 
